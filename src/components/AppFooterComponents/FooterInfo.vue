@@ -1,15 +1,72 @@
 <template>
-    <div>
-        
+    <div class="container">
+        <ul>
+            <li class="society">
+                <img src="../../assets/images/cropped-Group-39-2x.png" alt="main logo">
+                <p>While the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees. While the lovely valley teems with vapour around me</p>
+            </li>
+            <li class="links">
+                <h3>quick links</h3>
+                <ul>
+                    <li v-for="link in quickLinkList">
+                        {{ link }}
+                    </li>
+                </ul>
+            </li>
+            <li class="contact">
+                <h3>contact</h3>
+                <ul>
+                    <li>Patricia C. Amedee 4401 Waldeck Street Grapevine Nashville, TX 76051</li>
+                    <li>info@yourdomain.com</li>
+                    <li>+99 (0) 101 0000 888</li>
+                </ul>
+            </li>
+            <li class="location">
+                <h3>locaion on map</h3>
+                <img src="../../assets/images/map.png" alt="location">
+            </li>
+        </ul>
     </div>
 </template>
 
 <script>
 export default {
     name: 'FooterInfo',
+    data(){
+        return{
+            quickLinkList:[
+                'Careers',
+                'News',
+                'Terms of use',
+                'Privacy projects',
+                'About',
+                'Contact'
+            ]
+        }
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-    
+
+@use '../../styles/partials/alignment' as *;
+@use '../../styles/partials/colors' as *;
+    .container{
+        display: flex;
+        align-items: flex-end;
+        padding: $h-p-standard;
+        height: 580px;
+
+        >ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 560px;
+            width: 100%;
+
+            >li{
+                width: 22%;
+            }
+        }
+    }
 </style>
