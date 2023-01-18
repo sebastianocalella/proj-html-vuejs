@@ -19,6 +19,13 @@
         <div class="img-wrapper">
             <img src="../../assets/images/Group-35-2x.png" alt="">
         </div>
+        <div class="slider">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
     </div>
 </template>
 
@@ -29,6 +36,15 @@ export default {
     name: 'MainCarousel',
     components:{
         ComponentDivider
+    },
+    data(){
+        return{
+            CarouselImages:[
+                'Group-35-2x.png',
+                'Group-36-2x.png',
+                'Group-40-2x.png'
+            ]
+        }
     }
 }
 </script>
@@ -106,6 +122,21 @@ export default {
         overflow: hidden;
         img{
             transform: translate(0, -10%);
+        }
+    }
+
+    .slider ul{
+        display: flex;
+        padding: 15px 10px;
+        position: absolute;
+        left: 50%;
+        bottom: 35px;
+        transform: translate(-50%,-50%);
+        background: linear-gradient(to right, $bg-dark-1, $bg-darkest-t3);
+        border-radius: 30px;
+        li{
+            padding: 0 10px;
+            color: $c-lightest-t-6;
         }
     }
 </style>
