@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import ComponentDivider from '../StyleComponents/ComponentDivider.vue';
+import ComponentDivider from '../utilitiesComponents/ComponentDivider.vue';
 
 export default {
     name: 'FooterInfo',

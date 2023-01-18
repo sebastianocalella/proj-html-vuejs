@@ -6,17 +6,18 @@
             <span>88455438</span>
         </div>
 
-        <div class="socials">
-            <font-awesome-icon icon="fa-brands fa-facebook-f" />
-            <font-awesome-icon icon="fa-brands fa-twitter" />
-            <font-awesome-icon icon="fa-brands fa-pinterest-p" />
-        </div>
+        <SocialsComponent/>
     </div>
 </template>
 
 <script>
+import SocialsComponent from '../utilitiesComponents/SocialsComponent.vue';
+
 export default {
-    name: 'HeaderInfo'
+    name: 'HeaderInfo',
+    components:{
+        SocialsComponent,
+    }
 }
 </script>
 
