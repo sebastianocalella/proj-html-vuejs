@@ -1,12 +1,18 @@
 <template>
     <div class="container">
         <span>&copy; 2020 phlox businnes theme</span>
+        <SocialsComponent/>
     </div>
 </template>
 
 <script>
+import SocialsComponent from '../utilitiesComponents/SocialsComponent.vue';
+
 export default {
     name: 'CopyRightBanner',
+    components:{
+        SocialsComponent,
+    }
 }
 </script>
 
