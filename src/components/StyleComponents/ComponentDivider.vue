@@ -22,7 +22,7 @@ export default {
         
         .small{
             width: 9px;
-            background-image: linear-gradient(to right, $c-brand-green, $c-brand-blue);
+            background: linear-gradient(to right, $c-brand-green, $c-brand-blue);
             border-radius: 2px;
         }
         .large{
