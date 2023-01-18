@@ -1,15 +1,87 @@
 <template>
-    <div>
-        
+    <div class="container">
+        <div class="home">
+            <img src="../../assets/images/cropped-Group-39-2x.png" alt="">
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li v-for="listItem in menuList" class="menu-item">
+                {{ listItem }}</li>
+            </ul>
+        </div>
+
+        <div class="purchase-search">
+            <button>purchase</button>
+            <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
+        </div>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'HeaderNavbar'
+    name: 'HeaderNavbar',
+    data(){
+        return{
+            menuList:[
+                'home',
+                'about',
+                'services',
+                'showcase',
+                'blog',
+                'contact'
+            ]
+        }
+    }
 }
 </script>
 
 <style lang="scss" scoped>
+
+@use '../../styles/partials/colors.scss' as *;
+@use '../../styles/partials/alignment.scss' as *;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 104px;
+        padding: $h-p-standard;
+        background-color: $bg-lightest;
+
+        .menu{
+            height: 100%;
+
+            ul{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 515px;
+                height: 100%;
     
+                li{
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .purchase-search{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 210px;
+
+            button{
+                height: 52px;
+                width: 160px;
+                border-radius: 80px;
+                color: $c-lightest;
+                text-transform: uppercase;
+                border: none;
+            }
+
+            :last-child{
+                color: $c-brand-green;
+            }
+        }
+    }
 </style>
