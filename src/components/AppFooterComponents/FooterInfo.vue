@@ -1,12 +1,13 @@
 <template>
     <div class="container">
         <ul>
-            <li class="society">
+            <li class="agency">
                 <img src="../../assets/images/cropped-Group-39-2x.png" alt="main logo">
                 <p>While the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees. While the lovely valley teems with vapour around me</p>
             </li>
             <li class="links">
                 <h3>quick links</h3>
+                <ComponentDivider/>
                 <ul>
                     <li v-for="link in quickLinkList">
                         {{ link }}
@@ -15,6 +16,7 @@
             </li>
             <li class="contact">
                 <h3>contact</h3>
+                <ComponentDivider/>
                 <ul>
                     <li>Patricia C. Amedee 4401 Waldeck Street Grapevine Nashville, TX 76051</li>
                     <li>info@yourdomain.com</li>
@@ -23,6 +25,7 @@
             </li>
             <li class="location">
                 <h3>locaion on map</h3>
+                <ComponentDivider/>
                 <img src="../../assets/images/map.png" alt="location">
             </li>
         </ul>
@@ -30,8 +33,13 @@
 </template>
 
 <script>
+import ComponentDivider from '../StyleComponents/ComponentDivider.vue';
+
 export default {
     name: 'FooterInfo',
+    components:{
+        ComponentDivider
+    },
     data(){
         return{
             quickLinkList:[
@@ -66,6 +74,28 @@ export default {
 
             >li{
                 width: 22%;
+                height: 300px;
+            }
+
+            h3{
+                text-transform: uppercase;
+            }
+
+            .agency img{
+                    max-width: 100%;
+                    margin-bottom: 25px;
+            }
+
+            .links li{
+                text-align: center;
+            }
+
+            .contact li{
+                margin-bottom: 35px;
+            }
+
+            .location img{
+                    width: 100%;
             }
         }
     }
