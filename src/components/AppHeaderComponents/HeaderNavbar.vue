@@ -77,6 +77,11 @@ export default {
                 color: $c-lightest;
                 text-transform: uppercase;
                 border: none;
+                background: linear-gradient(to right, $bg-gradient-yellow, $bg-gradient-green);
+                box-shadow: #02D8A488 0px 7px 29px 0px;
+                &:hover{
+                    cursor: pointer;
+                }
             }
 
             :last-child{
