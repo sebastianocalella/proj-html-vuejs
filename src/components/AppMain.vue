@@ -22,9 +22,9 @@ export default {
 @use '../styles/partials/alignment' as *;
 
     section{
-        
+        padding: $h-p-standard;
+
         &:nth-child(odd){
-            padding: $h-p-standard;
             background-color: $bg-light-2;
         }
     }
