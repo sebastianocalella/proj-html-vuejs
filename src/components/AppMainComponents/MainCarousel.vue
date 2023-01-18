@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <div class="text-content">
             <span>17 years of experience</span>
             <h1>Focus on Your <span>Business</span></h1>
@@ -15,6 +15,9 @@
                 - 
                 <a href="">twitter</a>
             </span>
+        </div>
+        <div class="img-wrapper">
+            <img src="../../assets/images/Group-35-2x.png" alt="">
         </div>
     </div>
 </template>
@@ -32,6 +35,10 @@ export default {
 
 <style lang="scss" scoped>
 @use '../../styles/partials/colors' as *;
+
+    .container{
+        position: relative;
+    }
     .text-content{
         display: flex;
         flex-direction: column;
@@ -87,6 +94,18 @@ export default {
             &:visited{
                 color: $c-dark-3;
             }
+        }
+    }
+
+    .img-wrapper{
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 40%;
+        width: calc(60% + 150px);
+        overflow: hidden;
+        img{
+            transform: translate(0, -10%);
         }
     }
 </style>
