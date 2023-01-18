@@ -14,12 +14,14 @@ import {faFacebookF} from '@fortawesome/free-brands-svg-icons'
 import {faPinterestP} from '@fortawesome/free-brands-svg-icons'
 import {faTwitter} from '@fortawesome/free-brands-svg-icons'
 
-//solid
+//solid fa-magnifying-glass
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
 library.add(
     faFacebookF,
+    faMagnifyingGlass,
     faPhone,
     faPinterestP,
     faTwitter
