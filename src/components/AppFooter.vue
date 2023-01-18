@@ -1,12 +1,20 @@
 <template>
     <div>
-        
+        <FooterInfo/>
+        <CopyRightBanner/>
     </div>
 </template>
 
 <script>
+import FooterInfo from './AppFooterComponents/FooterInfo.vue';
+import CopyRightBanner from './AppFooterComponents/CopyRightBanner.vue';
+
 export default {
-    name: 'AppFooter'
+    name: 'AppFooter',
+    components:{
+        FooterInfo,
+        CopyRightBanner
+    }
 }
 </script>
 
