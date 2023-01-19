@@ -15,6 +15,9 @@
         <section id="our-projects">
             <OurProjects/>
         </section>
+        <section id="news-blog">
+            <NewsBlog/>
+        </section>
     </div>
 </template>
 
@@ -24,6 +27,7 @@ import YourWebsite from './AppMainComponents/YourWebsite.vue';
 import OurMissions from './AppMainComponents/OurMissions.vue';
 import OurWebDesigns from './AppMainComponents/OurWebDesigns.vue';
 import OurProjects from './AppMainComponents/OurProjects.vue';
+import NewsBlog from './AppMainComponents/NewsBlog.vue';
 
 export default {
     name: 'AppMain',
@@ -32,7 +36,8 @@ export default {
         YourWebsite,
         OurMissions,
         OurWebDesigns,
-        OurProjects
+        OurProjects,
+        NewsBlog,
     }
 }
 </script>
