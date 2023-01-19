@@ -20,7 +20,7 @@ export default {
 <style lang="scss" scoped>
 @use '../../styles/partials/colors' as *;
     .icon-card-container{
-        width: 46%;
+        width: 47%;
         background-color: $bg-lightest;
         box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
         border-radius: 25px;

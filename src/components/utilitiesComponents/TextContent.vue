@@ -38,11 +38,15 @@ export default {
     .text-content{
         h2 {
             font-size: 3rem;
-            line-height: 5rem;
+            line-height: 4rem;
 
             .text-content-component-span{
                 color:$c-brand-green;
             }
+        }
+        p{
+            color: $c-gray-2;
+            margin-bottom: 40px;
         }
     }
 </style>
