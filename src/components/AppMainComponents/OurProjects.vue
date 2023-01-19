@@ -28,20 +28,20 @@
                 :ulList="textContentAbsolute.ulContent"/>
             </div>
         </div>
-        <div class="text-content">
-            <h2>
-                With <span>Live Chat 24/7</span> support
-            </h2>
-            <ComponentDivider/>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. Separated they live in Bookmarksgrove.</p>
-        </div>
-        <div class="card-container">
-            <ProductCard v-for="productCard in productCards"
-            :title="productCard.title"
-            :subtitle="productCard.subtitle"
-            :price="productCard.price"
-            :productType="productCard.productType"
-            :features="productCard.features"/>
+
+        <div class="subscriptions-options">
+            <TextContent
+            :title="textContentSupport.title"
+            :text="textContentSupport.text"/>
+    
+            <div class="cards-container">
+                <ProductCard v-for="productCard in productCards"
+                :title="productCard.title"
+                :subtitle="productCard.subtitle"
+                :price="productCard.price"
+                :productType="productCard.productType"
+                :features="productCard.features"/>
+            </div>
         </div>
         <div class="feedback">
             <font-awesome-icon icon="fa-solid fa-quote-left" />
@@ -73,6 +73,10 @@ export default {
                     'large language ocean',
                     'Far from the Countries Vokalia and Casonantia'
                 ]
+            },
+            textContentSupport:{
+                title:'With <span class="text-content-component-span">Live Chat 24/7</span> support',
+                text:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. Separated they live in Bookmarksgrove.'
             },
             productCards:[
                 {
@@ -121,7 +125,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @use '../../styles/partials/colors' as *;
 
     #our-projects{
@@ -203,6 +207,20 @@ export default {
                 background-color: $bg-lightest;
                 border-radius: 10px;
                 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            }
+        }
+
+        .subscriptions-options{
+            display: flex;
+            justify-content: space-between;
+
+            .text-content{
+                width: 30%;
+            }
+            .cards-container{
+                display: flex;
+                justify-content: space-between;
+                width: 60%;
             }
         }
     }
