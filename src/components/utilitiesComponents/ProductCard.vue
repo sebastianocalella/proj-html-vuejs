@@ -3,7 +3,7 @@
         <h3>{{ title }}</h3>
         <p>{{ subtitle }}</p>
         <div>
-            <p>&dollar;<span>{{ price }}</span>{{ type }}</p>
+            <p>&dollar;<span>{{ price }}</span>{{ productType }}</p>
         </div>
         <ul>
             <li v-for="feature in features">
