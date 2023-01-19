@@ -15,6 +15,9 @@
         <section id="our-projects">
             <OurProjects/>
         </section>
+        <section id="our-feedback">
+            <OurFeedback/>
+        </section>
         <section id="news-blog">
             <NewsBlog/>
         </section>
@@ -27,6 +30,7 @@ import YourWebsite from './AppMainComponents/YourWebsite.vue';
 import OurMissions from './AppMainComponents/OurMissions.vue';
 import OurWebDesigns from './AppMainComponents/OurWebDesigns.vue';
 import OurProjects from './AppMainComponents/OurProjects.vue';
+import OurFeedback from './AppMainComponents/OurFeedback.vue';
 import NewsBlog from './AppMainComponents/NewsBlog.vue';
 
 export default {
@@ -37,6 +41,7 @@ export default {
         OurMissions,
         OurWebDesigns,
         OurProjects,
+        OurFeedback,
         NewsBlog,
     }
 }
