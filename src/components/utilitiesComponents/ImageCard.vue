@@ -1,9 +1,7 @@
 <template>
-    <div>
-        <img :src="getimage(imgUri)" alt="">
-        <p>{{ date }} &middot; {{ author }}</p>
-        <h4>{{ target }}</h4>
-    </div>
+    <img :src="getimage(imgUri)" alt="">
+    <p v-if="date&&author">{{ date }} &middot; {{ author }}</p>
+    <h4 v-if="target">{{ target }}</h4>
 </template>
 
 <script>
@@ -24,5 +22,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    
+    img{
+        width: 100%;
+    }
 </style>
