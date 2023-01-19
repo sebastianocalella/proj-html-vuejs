@@ -1,9 +1,12 @@
 <template>
-    <div>
-        <TextContent
-        :title="textContent.title"
-        :button="textContent.button"
-        />
+    <div class="container">
+
+        <div class="text-content-container">
+            <TextContent
+            :title="textContent.title"
+            :button="textContent.button"
+            />
+        </div>
 
         <div class="cards-container">
             <IconCard v-for="card in cards"
@@ -63,5 +66,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    
+    .container{
+        display: flex;
+        justify-content: space-between;
+        padding: 220px 0 250px;
+        .text-content-container{
+            width: 30%;
+            padding-top: 75px;
+        }
+
+        .cards-container{
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
 </style>

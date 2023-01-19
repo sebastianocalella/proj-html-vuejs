@@ -36,8 +36,13 @@ export default {
 <style lang="scss">
 @use '../../styles/partials/colors' as *;
     .text-content{
-        h2 .text-content-component-span{
-            color:$c-brand-green;
+        h2 {
+            font-size: 3rem;
+            line-height: 5rem;
+
+            .text-content-component-span{
+                color:$c-brand-green;
+            }
         }
     }
 </style>
