@@ -18,6 +18,9 @@
         <section id="news-blog">
             <NewsBlog/>
         </section>
+        <section id="join-us">
+            <JoinUs/>
+        </section>
     </div>
 </template>
 
@@ -28,6 +31,7 @@ import OurMissions from './AppMainComponents/OurMissions.vue';
 import OurWebDesigns from './AppMainComponents/OurWebDesigns.vue';
 import OurProjects from './AppMainComponents/OurProjects.vue';
 import NewsBlog from './AppMainComponents/NewsBlog.vue';
+import JoinUs from './AppMainComponents/JoinUs.vue'
 
 export default {
     name: 'AppMain',
@@ -38,6 +42,7 @@ export default {
         OurWebDesigns,
         OurProjects,
         NewsBlog,
+        JoinUs
     }
 }
 </script>
