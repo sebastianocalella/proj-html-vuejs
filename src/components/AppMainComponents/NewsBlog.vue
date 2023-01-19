@@ -12,6 +12,7 @@
                 :target="card.target"
                 :author="card.author"/>
             </div>
+            <button>view all posts</button>
         </div>
     </div>
 </template>
