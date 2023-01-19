@@ -1,10 +1,13 @@
 <template>
-    <div>
-        <div class="card-container">
+    <section id="join-us">
+        <div class="cards-container">
             <div class="card send-email">
                 <p>Are You Ready?</p>
-                <h3><input type="text" placeholder="Enter Your Email Address"></h3>
-                <button>submit</button>
+                <h3>Start A New Project</h3>
+                <div class="email-input">
+                    <input type="text" placeholder="Enter Your Email Address">
+                    <button>submit</button>
+                </div>
             </div>
             <div class="card start-now">
                 <p>What Are You Waiting for?</p>
@@ -17,7 +20,7 @@
                 <img :src="getImage(client.imgUri)" :alt="client.name + ' logo'">
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -62,5 +65,61 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    
+@use '../../styles/partials/colors' as *;
+
+#join-us{
+    padding: 270px 0 140px;
+    position: relative;
+    .cards-container{
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: calc(100% - 100px);
+        left: calc(50% - 1160px/2);
+        width: 1160px;
+
+        .card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: calc(100%/2 - 20px);
+            text-align: center;
+            padding: 60px 145px;
+            border-radius: 15px;
+
+            p{
+                color: $c-gray-1;
+                padding-bottom: 15px;
+            }
+
+            h3{
+                color: $c-lightest;
+                font-size: 1.8rem;
+                padding-bottom: 70px;
+            }
+
+        }
+        .send-email{
+            background:linear-gradient(to right, $bg-dark-1, black);
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+
+
+            .email-input{
+                display: flex;
+            }
+        }
+
+        .start-now{
+            background: linear-gradient(to right, $bg-gradient-green, $bg-gradient-yellow);
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
+            box-shadow: #02D8A488 0px 7px 29px 0px;
+        }
+    }
+
+    .sponsor{
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
 </style>

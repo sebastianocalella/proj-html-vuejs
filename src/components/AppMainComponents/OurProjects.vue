@@ -242,6 +242,7 @@ export default {
             .blancket{
                 display: flex;
                 flex-direction: column;
+                align-items: center;
                 padding: 170px 30% 150px;
                 color: $c-lightest;
 
@@ -262,6 +263,7 @@ export default {
 
             p{
                 font-size: 1.5rem;
+                max-width: 600px;
                 line-height: 2.8rem;
                 text-align: center;
                 margin-bottom: 170px;

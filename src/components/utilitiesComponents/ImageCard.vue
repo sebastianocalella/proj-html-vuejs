@@ -1,7 +1,11 @@
 <template>
-    <img :src="getimage(imgUri)" alt="">
-    <p v-if="date&&author">{{ date }} &middot; {{ author }}</p>
-    <h4 v-if="target">{{ target }}</h4>
+    <div class="container">
+        <img :src="getimage(imgUri)" alt="">
+        <div v-if="(date&&author)||target" :class="'absolute-content-container card-' + (index+1)">
+            <p v-if="date&&author">{{ date }} &middot; {{ author }}</p>
+            <h4 v-if="target"><span>&#11044;</span> {{ target }}</h4>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -11,7 +15,8 @@ export default {
         imgUri: String,
         date: String,
         target: String,
-        author: String
+        author: String,
+        index: Number
     },
     methods:{
         getimage: function(imagePath){
@@ -22,7 +27,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    img{
-        width: 100%;
+@use '../../styles/partials/colors' as *;
+    .container{
+    
+        img{
+            width: 100%;
+        }
+
+        .absolute-content-container{
+            position: absolute;
+            background-color: $bg-lightest;
+            transform: translateX(-50%);
+
+            p{
+                color: $c-gray-1;
+                font-size: .7rem;
+                margin-bottom: 15px;
+            }
+
+            h4{
+                font-size: 1.2rem;
+                line-height: 40px;
+
+                span{
+                    font-size: .6rem;
+                    vertical-align: top;
+                }
+            }
+        }
     }
 </style>
