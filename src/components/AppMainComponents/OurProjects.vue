@@ -2,7 +2,23 @@
     <section id="our-projects">
         <div class="absolute-cards-container">
             <div class="img-wrapper">
-                <div class="blancket"></div>
+                <div class="blancket">
+                    <div class="upper-content">
+                        <h1>280</h1>
+                        <span>projects</span>
+                    </div>
+                    <div class="lower-content">
+                        <div class="comments">
+                            <h4>+3,500</h4>
+                            <span>user's comments</span>
+                        </div>
+                        <div class="separator"></div>
+                        <div class="feedback">
+                            <h4>100%</h4>
+                            <span>happy clients</span>
+                        </div>
+                    </div>
+                </div>
                 <img src="../../assets/images/person-with-long-curly-hair-PZ99QM2-2x.jpg" alt="">
             </div>
             <div class="white-card">
@@ -11,19 +27,6 @@
                 :text="textContentAbsolute.text"
                 :ulList="textContentAbsolute.ulContent"/>
             </div>
-
-            <!--<div class="text-content">
-                <h2>
-                    We <span>Love</span> What We Do
-                </h2>
-                <ComponentDivider/>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. Separated they live in Bookmarksgrove.</p>
-                <ul>
-                    <li>Far away, behind the word mountains</li>
-                    <li>large language ocean</li>
-                    <li>Far from the Countries Vokalia and Casonantia</li>
-                </ul>
-            </div> -->
         </div>
         <div class="text-content">
             <h2>
@@ -148,6 +151,44 @@ export default {
                     height: 100%;
                     background: linear-gradient(45deg,$bg-gradient-yellow-t,$bg-gradient-green-t);
                     z-index: 1;
+                    
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    color: $c-lightest;
+
+                    h1{
+                        font-size: 8rem;
+                        font-weight: 200;
+                    }
+
+                    span{
+                        text-transform: uppercase;
+                        font-size: 1.2rem;
+                    }
+
+                    .upper-content{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-bottom: 50px;
+                    }
+                    .lower-content{
+                        display: flex;
+                        align-items: center;
+                        h4{
+                            font-size: 2rem;
+                            text-align: center;
+                        }
+
+                        .separator{
+                            width: 1px;
+                            height: 80%;
+                            background-color: $bg-lightest;
+                            margin: 0 45px;
+                        }
+                    }
                 }
             }
 
