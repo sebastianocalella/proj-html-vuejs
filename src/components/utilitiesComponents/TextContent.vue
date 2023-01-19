@@ -6,7 +6,7 @@
         <p v-if="text">{{ text }}</p>
         <ul v-if="ulList">
         <li v-for="element in ulList.list">
-        <span>&check;</span>{{ element }}</li>
+        <span class="text-content-component-span">&check;</span>{{ element }}</li>
         </ul>
         <button v-if="button" :class="button.color">{{ button.content }}</button>
     </div>
@@ -33,6 +33,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-    
+<style lang="scss">
+@use '../../styles/partials/colors' as *;
+    .text-content{
+        h2 .text-content-component-span{
+            color:$c-brand-green;
+        }
+    }
 </style>

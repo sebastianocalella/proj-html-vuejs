@@ -29,7 +29,7 @@ export default {
     data(){
         return{
             textContent:{
-                title:'We Are Here To Make Your <span>Website</span> Look More <span>Elegant</span> And Stylish!',
+                title:'We Are Here To Make Your <span class="text-content-component-span">Website</span> Look More <span class="text-content-component-span">Elegant</span> And Stylish!',
                 button:{
                     content:'view all',
                     color:'brand-color'
