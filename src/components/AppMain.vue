@@ -23,6 +23,7 @@ export default {
 
     section{
         padding: $h-p-standard;
+        position: relative;
 
         &:nth-child(odd){
             background-color: $bg-light-2;

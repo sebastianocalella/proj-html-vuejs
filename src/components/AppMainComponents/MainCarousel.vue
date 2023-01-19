@@ -21,9 +21,9 @@
         </div>
         <div class="slider">
             <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
+                <li v-for="(image,index) in carouselImages">
+                    0{{ index + 1}}
+                </li>
             </ul>
         </div>
     </div>
@@ -39,7 +39,7 @@ export default {
     },
     data(){
         return{
-            CarouselImages:[
+            carouselImages:[
                 'Group-35-2x.png',
                 'Group-36-2x.png',
                 'Group-40-2x.png'
@@ -52,9 +52,6 @@ export default {
 <style lang="scss" scoped>
 @use '../../styles/partials/colors' as *;
 
-    .container{
-        position: relative;
-    }
     .text-content{
         display: flex;
         flex-direction: column;
@@ -114,11 +111,12 @@ export default {
     }
 
     .img-wrapper{
+
         position: absolute;
         height: 100%;
         top: 0;
-        left: 40%;
-        width: calc(60% + 150px);
+        right: 0px;
+        width: 1150px;
         overflow: hidden;
         img{
             transform: translate(0, -10%);
