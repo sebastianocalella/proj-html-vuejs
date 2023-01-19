@@ -3,16 +3,36 @@
         <section id="carousel-section">
             <MainCarousel/>
         </section>
+        <section id="your-website">
+            <YourWebsite/>
+        </section>
+        <section id="our-missions">
+            <OurMissions/>
+        </section>
+        <section id="our-web-designs">
+            <OurWebDesigns/>
+        </section>
+        <section id="our-projects">
+            <OurProjects/>
+        </section>
     </div>
 </template>
 
 <script>
 import MainCarousel from './AppMainComponents/MainCarousel.vue';
+import YourWebsite from './AppMainComponents/YourWebsite.vue';
+import OurMissions from './AppMainComponents/OurMissions.vue';
+import OurWebDesigns from './AppMainComponents/OurWebDesigns.vue';
+import OurProjects from './AppMainComponents/OurProjects.vue';
 
 export default {
     name: 'AppMain',
     components:{
-        MainCarousel
+        MainCarousel,
+        YourWebsite,
+        OurMissions,
+        OurWebDesigns,
+        OurProjects
     }
 }
 </script>
