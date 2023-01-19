@@ -16,8 +16,10 @@
                 <a href="">twitter</a>
             </span>
         </div>
-        <div class="img-wrapper">
-            <img src="../../assets/images/Group-35-2x.png" alt="">
+        <div class="carousel-container">
+            <div v-for="(image,index) in carouselImages" :key="index" class="img-wrapper">
+                <img :src="getCarouselImage(image)" alt="">
+            </div>
         </div>
         <div class="slider">
             <ul>
@@ -43,8 +45,14 @@ export default {
                 'Group-35-2x.png',
                 'Group-36-2x.png',
                 'Group-40-2x.png'
-            ]
+            ],
+            currentIndex: 1,
         }
+    },
+    methods:{
+        getCarouselImage: function(imagePath){
+            return new URL('../../assets/images/'+imagePath, import.meta.url).href
+        },
     }
 }
 </script>
@@ -110,16 +118,22 @@ export default {
         }
     }
 
-    .img-wrapper{
-
+    .carousel-container{
+        display: flex;
         position: absolute;
-        height: 100%;
         top: 0;
-        right: 0px;
-        width: 1150px;
-        overflow: hidden;
-        img{
-            transform: translate(0, -10%);
+        left: calc(100% - 1150px);
+        height: 100%;
+        .img-wrapper{
+            position: relative;
+            height: 100%;
+            top: 0;
+            right: 0px;
+            width: 1150px;
+            overflow: hidden;
+            img{
+                transform: translate(0, -10%);
+            }
         }
     }
 
