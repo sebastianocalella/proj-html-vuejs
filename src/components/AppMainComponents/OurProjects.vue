@@ -44,9 +44,15 @@
             </div>
         </div>
         <div class="feedback">
-            <font-awesome-icon icon="fa-solid fa-quote-left" />
-            <p>When it comes to barbequing, there are two main schools of thought for the techniques that you can use. Freshly scrambled eggs with applewood smoked bacon - are amazing!</p>
-            <img src="../../assets/images/businesswoman-analysing-document-P8WSNMC-1024x820.jpg" alt="">
+            <div class="blancket">
+                <font-awesome-icon class="icon" icon="fa-solid fa-quote-left" />
+                <p>When it comes to barbequing, there are two main schools of thought for the techniques that you can use. Freshly scrambled eggs with applewood smoked bacon - are amazing!</p>
+                <h5>lissa durbin</h5>
+                <p>Client</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="../../assets/images/businesswoman-analysing-document-P8WSNMC-1024x820.jpg" alt="">
+            </div>
         </div>
     </section>
 </template>
@@ -131,6 +137,7 @@ export default {
     #our-projects{
         display: flex;
         flex-direction: column;
+        align-items: center;
 
         .absolute-cards-container{
             width: 100%;
@@ -213,6 +220,7 @@ export default {
         .subscriptions-options{
             display: flex;
             justify-content: space-between;
+            margin-bottom: 200px;
 
             .text-content{
                 width: 30%;
@@ -221,6 +229,70 @@ export default {
                 display: flex;
                 justify-content: space-between;
                 width: 60%;
+            }
+        }
+
+        >.feedback{
+            position: relative;
+            width: calc(100% + 300px);
+            height: 800px;
+            background-image: url(../../assets/images/four-businesspeople-in-a-boardroom-with-paperwork-PC4V8H4.jpg);
+            background-size: cover;
+            
+            .blancket{
+                display: flex;
+                flex-direction: column;
+                padding: 170px 30% 150px;
+                color: $c-lightest;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                z-index: 1;
+                background-color: $bg-dark-1;
+            }
+
+            .icon{
+                font-size: 4.5rem;
+                color: $c-brand-green;
+                margin-bottom: 50px;
+            }
+
+            p{
+                font-size: 1.5rem;
+                line-height: 2.8rem;
+                text-align: center;
+                margin-bottom: 170px;
+                &:first-of-type{
+                    font-style: italic;
+                } 
+            }
+
+            h5{
+                text-transform: uppercase;
+                color: $c-brand-green;
+                font-size: 1.8rem;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+            
+        }
+        .image-wrapper{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 165px;
+            width: 90px;
+            height: 90px;
+            border-radius: 45px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border: 1px solid $c-lightest;
+            z-index: 2;
+            img{
+                height: 100%;
             }
         }
     }
