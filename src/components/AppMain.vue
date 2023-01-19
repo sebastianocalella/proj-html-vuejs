@@ -1,26 +1,12 @@
 <template>
     <div>
-        <section id="carousel-section">
-            <MainCarousel/>
-        </section>
-        <section id="your-website">
-            <YourWebsite/>
-        </section>
-        <section id="our-missions">
-            <OurMissions/>
-        </section>
-        <section id="our-web-designs">
-            <OurWebDesigns/>
-        </section>
-        <section id="our-projects">
-            <OurProjects/>
-        </section>
-        <section id="news-blog">
-            <NewsBlog/>
-        </section>
-        <section id="join-us">
-            <JoinUs/>
-        </section>
+        <MainCarousel/>
+        <YourWebsite/>
+        <OurMissions/>
+        <OurWebDesigns/>
+        <OurProjects/>
+        <NewsBlog/>
+        <JoinUs/>
     </div>
 </template>
 
