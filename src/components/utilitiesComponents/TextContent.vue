@@ -5,7 +5,7 @@
         <ComponentDivider/>
         <p v-if="text">{{ text }}</p>
         <ul v-if="ulList">
-        <li v-for="element in ulList.list">
+        <li v-for="element in ulList">
         <span class="text-content-component-span">&check;</span>{{ element }}</li>
         </ul>
         <button v-if="button" :class="button.color">{{ button.content }}</button>
@@ -40,13 +40,16 @@ export default {
             font-size: 3rem;
             line-height: 4rem;
 
-            .text-content-component-span{
-                color:$c-brand-green;
-            }
+        }
+        .text-content-component-span{
+            color:$c-brand-green;
         }
         p{
             color: $c-gray-2;
             margin-bottom: 40px;
+        }
+        li{
+            margin-bottom: 25px;
         }
     }
 </style>
