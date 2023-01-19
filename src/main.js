@@ -14,15 +14,14 @@ import {faFacebookF} from '@fortawesome/free-brands-svg-icons'
 import {faPinterestP} from '@fortawesome/free-brands-svg-icons'
 import {faTwitter} from '@fortawesome/free-brands-svg-icons'
 
-//solid fa-stopwatch
+//solid
 import {faCloud} from '@fortawesome/free-solid-svg-icons'
 import {faGaugeSimpleHigh} from '@fortawesome/free-solid-svg-icons'
 import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 import {faPhone} from '@fortawesome/free-solid-svg-icons'
+import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 import {faStopwatch} from '@fortawesome/free-solid-svg-icons'
 import {faTabletScreenButton} from '@fortawesome/free-solid-svg-icons'
-
-//regular 
 
 /* add icons to the library */
 library.add(
@@ -32,6 +31,7 @@ library.add(
     faMagnifyingGlass,
     faPhone,
     faPinterestP,
+    faQuoteLeft,
     faStopwatch,
     faTabletScreenButton,
     faTwitter
