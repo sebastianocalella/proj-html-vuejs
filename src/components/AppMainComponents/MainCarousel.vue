@@ -2,12 +2,12 @@
     <section id="main-carousel">
         <div class="container">
             <CarouselSlide v-for="(slide,index) in carouselSlides" :key="slide" :index="index"
-            :textContent="slide.textContent"
-            :socials="slide.socials"
-            :imgUri="slide.imageUri"
-            :visibleSlide="visibleSlide"
-            :direction="carouselDirection"/>
-        </div> 
+                :textContent="slide.textContent"
+                :socials="slide.socials"
+                :imgUri="slide.imageUri"
+                :visibleSlide="visibleSlide"
+                :direction="carouselDirection"/>
+            </div>         
         <div class="slider">
             <ul>
                 <li><font-awesome-icon @click="prevSlide" icon="fa-solid fa-caret-left" 
@@ -123,6 +123,8 @@ export default {
 
 #main-carousel{
     position: relative;
+    height: 950px;
+    overflow: hidden;
     .slider ul{
         display: flex;
         padding: 15px 10px;

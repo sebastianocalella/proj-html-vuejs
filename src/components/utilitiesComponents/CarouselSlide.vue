@@ -1,21 +1,24 @@
 <template>
-    <div v-show="visibleSlide === index" class="container">
-        <div class="text-content-container">
-            <TextContent
-            :surtitle="textContent.surtitle"
-            :title="textContent.title"
-            :text="textContent.text"
-            :button="textContent.button"/>
-            <ul>
-                <li v-for="social in socials">
-                    <span>{{ social }}</span>
-                </li>
-            </ul>
-        </div>
-        <div class="img-wrapper" :class="direction">
-            <img :src="getCarouselImage(imgUri)" alt="">
-        </div>
-    </div>
+    <transition>
+        <div v-show="visibleSlide === index" class="container"
+        :class="(visibleSlide === index) ? 'current-slide' : 'hidden'">
+            <div class="text-content-container">
+                <TextContent
+                :surtitle="textContent.surtitle"
+                :title="textContent.title"
+                :text="textContent.text"
+                :button="textContent.button"/>
+                <ul>
+                    <li v-for="social in socials">
+                        <span>{{ social }}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="img-wrapper" :class="direction">
+                <img :src="getCarouselImage(imgUri)" alt="">
+            </div>
+        </div>        
+    </transition>
 </template>
 <script>
 import TextContent from './TextContent.vue';
@@ -42,12 +45,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.v-enter-active,
+.v-leave-active {
+    transition: opacity 1s ease-in-out;
+}
+
+.v-enter-from,
+.v-leave-to {
+    opacity: 0;
+}
     .container{
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-top: 90px;
-
+        position: absolute;
         .text-content-container{
             width: 30%;
             margin-left: 150px;
