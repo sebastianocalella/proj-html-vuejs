@@ -49,6 +49,10 @@ export default {
         padding: $h-p-standard;
         background-color: $bg-lightest;
 
+        .home:hover{
+            cursor: pointer;
+        }
+
         .menu{
             height: 100%;
 
@@ -61,6 +65,11 @@ export default {
     
                 li{
                     text-transform: uppercase;
+                    color: $c-gray-2;
+                    &:hover{
+                        cursor: pointer;
+                        color: $c-dark-3;
+                    }
                 }
             }
         }
@@ -77,6 +86,9 @@ export default {
 
             :last-child{
                 color: $c-brand-green;
+                &:hover{
+                    cursor: pointer;
+                }
             }
         }
     }
