@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <main>
         <MainCarousel/>
         <YourWebsite/>
         <OurMissions/>
@@ -7,7 +7,7 @@
         <OurProjects/>
         <NewsBlog/>
         <JoinUs/>
-    </div>
+    </main>
 </template>
 
 <script>

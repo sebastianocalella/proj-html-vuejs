@@ -31,7 +31,7 @@ export default {
         align-items: center;
         height: 40px;
         padding: $h-p-standard;
-        background-color: $bg-dark-1;
+        background-color: $bg-dark-2;
         color: $c-lightest;
 
         .contacts{

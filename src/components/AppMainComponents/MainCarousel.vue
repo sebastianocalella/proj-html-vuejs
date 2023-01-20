@@ -1,52 +1,109 @@
 <template>
     <div class="container">
-        <div class="text-content">
-            <span>17 years of experience</span>
-            <h1>Focus on Your <span>Business</span></h1>
-            <ComponentDivider/>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. Separated they live in Bookmarksgrove.</p>
-            <button>read more</button>
-            <span>
-                <a href="">facebook </a>
-                - 
-                <a href="">instagram </a>
-                - 
-                <a href="">youtube </a>
-                - 
-                <a href="">twitter</a>
-            </span>
-        </div>
-        <div class="carousel-container">
-            <div v-for="(image,index) in carouselImages" :key="index" class="img-wrapper">
-                <img :src="getCarouselImage(image)" alt="">
+        <CarouselSlide v-for="(slide,index) in carouselSlides" :key="slide" :index="index"
+        :textContent="slide.textContent"
+        :socials="slide.socials"
+        :imgUri="slide.imageUri"
+        :visibleSlide="visibleSlide"/>
+    </div> 
+    <!--         <div class="text-content">
+                <span>17 years of experience</span>
+                <h1>Focus on Your <span>Business</span></h1>
+                <ComponentDivider/>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. Separated they live in Bookmarksgrove.</p>
+                <button>read more</button>
+                <span>
+                    <a href="">facebook </a>
+                    - 
+                    <a href="">instagram </a>
+                    - 
+                    <a href="">youtube </a>
+                    - 
+                    <a href="">twitter</a>
+                </span>
             </div>
-        </div>
-        <div class="slider">
-            <ul>
-                <li v-for="(image,index) in carouselImages">
-                    0{{ index + 1}}
-                </li>
-            </ul>
-        </div>
-    </div>
+            <div class="carousel-container">
+                <div>
+                    <img src="../../assets/images/Group-35-2x.png" alt="">
+                </div>
+            </div>
+            <div class="slider">
+                <ul>
+                    <li v-for="(image,index) in carouselImages">
+                        0{{ index + 1}}
+                    </li>
+                </ul>
+            </div>
+        -->
 </template>
 
 <script>
-import ComponentDivider from '../utilitiesComponents/ComponentDivider.vue';
+import CarouselSlide from '../utilitiesComponents/CarouselSlide.vue'
 
 export default {
     name: 'MainCarousel',
     components:{
-        ComponentDivider
+        CarouselSlide
     },
     data(){
         return{
-            carouselImages:[
-                'Group-35-2x.png',
-                'Group-36-2x.png',
-                'Group-40-2x.png'
+            carouselSlides:[
+                {
+                    textContent:{
+                        surtitle:'17 years of experience',
+                        title:'Focus on Your <span class=text-content-component-span>Business</span>',
+                        text:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. Separated they live in Bookmarksgrove.',
+                        button:{
+                            content:'read more',
+                            color: 'brand-dark'
+                        }
+                    },
+                    socials:[
+                        'Facebook',
+                        'Instagram',
+                        'Youtube',
+                        'Twitter'
+                    ],
+                    imageUri:'Group-35-2x.png'
+                },
+                {
+                    textContent:{
+                        surtitle:'17 years of experience',
+                        title:'We Area a <br> Web Design <span class=text-content-component-span>BAgency</span>',
+                        text:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. Separated they live in Bookmarksgrove.',
+                        button:{
+                            content:'read more',
+                            color: 'brand-dark'
+                        }
+                    },
+                    socials:[
+                        'Facebook',
+                        'Instagram',
+                        'Youtube',
+                        'Twitter'
+                    ],
+                    imageUri:'Group-36-2x.png'
+                },
+                {
+                    textContent:{
+                        surtitle:'17 years of experience',
+                        title:'A Group of <br> Experts <span class=text-content-component-span>Planners</span>',
+                        text:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. Separated they live in Bookmarksgrove.',
+                        button:{
+                            content:'read more',
+                            color: 'brand-dark'
+                        }
+                    },
+                    socials:[
+                        'Facebook',
+                        'Instagram',
+                        'Youtube',
+                        'Twitter'
+                    ],
+                    imageUri:'Group-40-2x.png'
+                }
             ],
-            currentIndex: 1,
+            visibleSlide: 2,
         }
     },
     methods:{
