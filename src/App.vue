@@ -28,6 +28,12 @@ export default{
     h1,h2,h3,h4{
       font-family: 'Ubuntu', sans-serif;
     }
+    h1,h2{
+      font-weight: 300
+    }
+    h3,h4{
+      font-weight: 200
+    }
   }
 
 

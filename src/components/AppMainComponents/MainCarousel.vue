@@ -55,7 +55,7 @@ export default {
                 {
                     textContent:{
                         surtitle:'17 years of experience',
-                        title:'We Area a <br> Web Design <span class=text-content-component-span>BAgency</span>',
+                        title:'We Area a <br> Web Design <span class=text-content-component-span>Agency</span>',
                         text:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. Separated they live in Bookmarksgrove.',
                         button:{
                             content:'read more',
