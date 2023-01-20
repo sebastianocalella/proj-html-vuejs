@@ -1,20 +1,21 @@
 <template>
-    <div class="container">
-
-        <div class="text-content-container">
-            <TextContent
-            :title="textContent.title"
-            :button="textContent.button"
-            />
+    <section id="your-website">
+        <div class="container">
+            <div class="text-content-container">
+                <TextContent
+                :title="textContent.title"
+                :button="textContent.button"
+                />
+            </div>
+    
+            <div class="cards-container">
+                <IconCard v-for="card in cards"
+                :cardIcon="card.icon"
+                :cardTitle="card.title"
+                :cardText="card.text"/>
+            </div>
         </div>
-
-        <div class="cards-container">
-            <IconCard v-for="card in cards"
-            :cardIcon="card.icon"
-            :cardTitle="card.title"
-            :cardText="card.text"/>
-        </div>
-    </div>
+    </section>
 </template>
 
 <script>

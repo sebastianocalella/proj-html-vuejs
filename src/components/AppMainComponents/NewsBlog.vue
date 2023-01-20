@@ -1,16 +1,18 @@
 <template>
     <section id="news-blog">
-        <TextContent
-        :title="textContent.title"/>
-        <div class="card-container">
-            <ImageCard v-for="(card,index) in cards"
-            :index="index"
-            :imgUri="card.imageUri"
-            :date="card.date"
-            :target="card.target"
-            :author="card.author"/>
+        <div class="container">
+            <TextContent
+            :title="textContent.title"/>
+            <div class="card-container">
+                <ImageCard v-for="(card,index) in cards"
+                :index="index"
+                :imgUri="card.imageUri"
+                :date="card.date"
+                :target="card.target"
+                :author="card.author"/>
+            </div>
+            <button>view all posts</button>
         </div>
-        <button>view all posts</button>
     </section>
 </template>
 
@@ -60,49 +62,52 @@ export default {
 @use '../../styles/general.scss' as *;
 
     #news-blog{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 240px 0 350px;
+        .container{
 
-        .text-content>.divider-container{
-            margin-left: calc(50% - 32px);
-        }
-
-        .card-container{
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 75px;
-            position: relative;
-
-            >.container{
-                padding: 0 40px;
-                width: calc(100%/3 - 22px);
-                border-radius: 15px;
-                overflow: hidden;
-                box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
-
-                .absolute-content-container{
-                    border-radius: 10px;
+            flex-direction: column;
+            align-items: center;
+            padding: 240px 0 350px;
+    
+            .text-content>.divider-container{
+                margin-left: calc(50% - 32px);
+            }
+    
+            .card-container{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 75px;
+                position: relative;
+    
+                >.container{
+                    padding: 0 40px;
+                    width: calc(100%/3 - 22px);
+                    border-radius: 15px;
+                    overflow: hidden;
                     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
-                    padding: 25px 25px 0;
-                    top: calc(100% - 40px);
-                    width: calc(70%/3);
-                    &.card-1{
-                        left: calc(100%/6);
-                    }
-                    &.card-2{
-                        left: 50%;
-                    }
-                    &.card-3{
-                        left: calc(50% + (100%/3));
+    
+                    .absolute-content-container{
+                        border-radius: 10px;
+                        box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+                        padding: 25px 25px 0;
+                        top: calc(100% - 40px);
+                        width: calc(70%/3);
+                        &.card-1{
+                            left: calc(100%/6);
+                        }
+                        &.card-2{
+                            left: 50%;
+                        }
+                        &.card-3{
+                            left: calc(50% + (100%/3));
+                        }
                     }
                 }
             }
-        }
-
-        button{
-            @include brand-dark;
+    
+            button{
+                @include brand-dark;
+            }
         }
     }
 </style>

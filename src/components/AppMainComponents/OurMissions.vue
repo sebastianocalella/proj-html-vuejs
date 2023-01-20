@@ -1,21 +1,23 @@
 <template>
-    <div class="container">
-        <div class="cards-container">
-            <div class="img-wrapper">
-                <div class="blancket"></div>
-                <img src="../../assets/images/busy-architect-PYVKWM4-1024x872.jpg" alt="">
+    <section id="our-missions">
+        <div class="container">
+            <div class="cards-container">
+                <div class="img-wrapper">
+                    <div class="blancket"></div>
+                    <img src="../../assets/images/busy-architect-PYVKWM4-1024x872.jpg" alt="">
+                </div>
+                <div class="img-wrapper">
+                    <img src="../../assets/images/businesswoman-analysing-document-P8WSNMC-1024x820.jpg" alt="">
+                </div>
             </div>
-            <div class="img-wrapper">
-                <img src="../../assets/images/businesswoman-analysing-document-P8WSNMC-1024x820.jpg" alt="">
+            <div class="text-content-container">
+                <TextContent
+                :title="textContent.title"
+                :text="textContent.text"
+                :button="textContent.button"/>
             </div>
         </div>
-        <div class="text-content-container">
-            <TextContent
-            :title="textContent.title"
-            :text="textContent.text"
-            :button="textContent.button"/>
-        </div>
-    </div>
+    </section>
 </template>
 
 <script>
