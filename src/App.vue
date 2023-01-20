@@ -36,6 +36,10 @@ export default{
     }
   }
 
+  body{
+    min-width: 1480px
+  }
+
 
   button{
     @include middle-button;
