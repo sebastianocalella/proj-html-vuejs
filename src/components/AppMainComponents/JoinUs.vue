@@ -127,7 +127,7 @@ export default {
         .start-now{
             background: linear-gradient(to right, $bg-gradient-green, $bg-gradient-yellow);
             box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
-            box-shadow: #02D8A488 0px 7px 29px 0px;
+            box-shadow: #e0a45f 0px 7px 29px 0px;
 
             button{
                 @include brand-dark;

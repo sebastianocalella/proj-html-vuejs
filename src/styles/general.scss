@@ -20,7 +20,7 @@
 
 @mixin brand-color{
     background: linear-gradient(to right, $bg-gradient-yellow, $bg-gradient-green);
-    box-shadow: #02D8A488 0px 7px 29px 0px;
+    box-shadow: #e0a45f 0px 7px 29px 0px;
     &:hover{
         cursor: pointer;
         background:linear-gradient(to right, $bg-dark-1, black);
@@ -34,6 +34,6 @@
     &:hover{
         cursor: pointer;
         background: linear-gradient(to right, $bg-gradient-yellow, $bg-gradient-green);
-        box-shadow: #02D8A488 0px 7px 29px 0px;
+        box-shadow: #e0a45f 0px 7px 29px 0px;
     }
 }
