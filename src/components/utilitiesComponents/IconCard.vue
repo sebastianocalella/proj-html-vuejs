@@ -41,5 +41,12 @@ export default {
             color:$c-gray-2;
             line-height: 1.8rem;
         }
+
+        &:hover{
+            background: linear-gradient(45deg,$bg-gradient-yellow-t,$bg-gradient-green-t);
+            h2,.icon,p{
+                color: $c-lightest;
+            }
+        }
     }
 </style>
