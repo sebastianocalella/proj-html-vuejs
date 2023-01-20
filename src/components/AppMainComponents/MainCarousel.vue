@@ -138,7 +138,13 @@ export default {
         li{
             padding: 0 10px;
             color: $c-lightest-t-6;
+            font-size: 1.4rem;
             transition: all .35s ease-in-out;
+        }
+
+        li:first-child,
+        li:last-child{
+            cursor: pointer;
         }
 
         .current-slide{
