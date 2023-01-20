@@ -32,6 +32,8 @@ export default {
     
         img{
             width: 100%;
+            transition: all .4s ease-in-out;
+
         }
         .absolute-content-container{
             position: absolute;

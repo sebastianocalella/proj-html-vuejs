@@ -116,6 +116,9 @@ export default {
                             color: $c-lightest;
                         }
                     }
+                    &:hover img{
+                        transform: scale(1.1);
+                    }
                 }
             }
     
