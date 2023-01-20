@@ -57,6 +57,8 @@ export default {
 </script>
 
 <style lang="scss">
+@use '../../styles/general.scss' as *;
+
     #OurWebDesigns{
         padding: 220px 150px;
 
@@ -88,6 +90,7 @@ export default {
         button{
             margin-left: 50%;
             transform: translateX(-50%);
+            @include brand-color
         }
     }
 </style>

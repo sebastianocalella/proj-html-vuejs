@@ -34,7 +34,10 @@ export default {
 </script>
 
 <style lang="scss">
+@use '../../styles/general.scss' as *;
 @use '../../styles/partials/colors' as *;
+@use '../../styles/partials/alignment' as *;
+
     .text-content{
         h2 {
             font-size: 3rem;
@@ -50,6 +53,14 @@ export default {
         }
         li{
             margin-bottom: 25px;
+        }
+
+        .brand-color{
+            @include brand-color;
+        }
+
+        .brand-dark{
+            @include brand-dark;
         }
     }
 </style>

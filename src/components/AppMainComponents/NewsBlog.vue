@@ -57,11 +57,13 @@ export default {
 </script>
 
 <style lang="scss">
+@use '../../styles/general.scss' as *;
+
     #news-blog{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 240px 0;
+        padding: 240px 0 350px;
 
         .text-content>.divider-container{
             margin-left: calc(50% - 32px);
@@ -97,6 +99,10 @@ export default {
                     }
                 }
             }
+        }
+
+        button{
+            @include brand-dark;
         }
     }
 </style>

@@ -66,6 +66,7 @@ export default {
 
 <style lang="scss" scoped>
 @use '../../styles/partials/colors' as *;
+@use '../../styles/general.scss' as *;
 
 #join-us{
     padding: 270px 0 140px;
@@ -102,10 +103,24 @@ export default {
         .send-email{
             background:linear-gradient(to right, $bg-dark-1, black);
             box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
-
-
             .email-input{
                 display: flex;
+                background-color: $bg-gray-t;
+                border-radius: 40px;
+                
+                input{
+                    color: $bg-gray-1;
+                    background-color:#00000000;
+                    border: none;
+                    padding-left: 25px;
+                }
+                button{
+                    color: $bg-gray-2;
+                    width: 100px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    background-color: #00000000;
+                }
             }
         }
 
@@ -113,6 +128,10 @@ export default {
             background: linear-gradient(to right, $bg-gradient-green, $bg-gradient-yellow);
             box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
             box-shadow: #02D8A488 0px 7px 29px 0px;
+
+            button{
+                @include brand-dark;
+            }
         }
     }
 

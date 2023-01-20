@@ -29,4 +29,9 @@ export default{
       font-family: 'Ubuntu', sans-serif;
     }
   }
+
+
+  button{
+    @include middle-button;
+  }
 </style>

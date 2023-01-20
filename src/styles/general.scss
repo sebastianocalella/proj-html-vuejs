@@ -1,3 +1,5 @@
+@use './partials/colors' as *;
+
 *,
 *::before,
 *::after{
@@ -5,4 +7,33 @@
     padding: 0;
     box-sizing: border-box;
     list-style-type: none;
+}
+
+@mixin middle-button{                 
+    height: 52px;
+    width: 160px;
+    border-radius: 80px;
+    text-transform: uppercase;
+    border: none;
+    color: $c-lightest;
+}
+
+@mixin brand-color{
+    background: linear-gradient(to right, $bg-gradient-yellow, $bg-gradient-green);
+    box-shadow: #02D8A488 0px 7px 29px 0px;
+    &:hover{
+        cursor: pointer;
+        background:linear-gradient(to right, $bg-dark-1, black);
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+    }
+}
+
+@mixin brand-dark {
+    background:linear-gradient(to right, $bg-dark-1, black);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+    &:hover{
+        cursor: pointer;
+        background: linear-gradient(to right, $bg-gradient-yellow, $bg-gradient-green);
+        box-shadow: #02D8A488 0px 7px 29px 0px;
+    }
 }
