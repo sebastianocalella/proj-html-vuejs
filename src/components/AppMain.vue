@@ -7,6 +7,9 @@
         <OurProjects/>
         <NewsBlog/>
         <JoinUs/>
+        <button id="chat-with-us">
+            <font-awesome-icon icon="fa-solid fa-comment" />
+        </button>
     </main>
 </template>
 
@@ -39,6 +42,7 @@ export default {
 
     main{
         min-width: 1480px;
+        position: relative;
 
         section{
             padding: $h-p-standard;
@@ -46,6 +50,21 @@ export default {
     
             &:nth-child(odd){
                 background-color: $bg-light-2;
+            }
+        }
+
+        #chat-with-us{
+            background: linear-gradient(45deg,$bg-gradient-yellow-t,$bg-gradient-green-t);
+            font-size: 1.7rem;
+            width: 60px;
+            height: 60px;
+            position: fixed;
+            bottom: 100px;
+            right: 70px;
+            z-index: 3;
+            &:hover{
+                cursor: pointer;
+                background: linear-gradient(45deg,$bg-darkest-t3,$bg-gray-t);
             }
         }
     }

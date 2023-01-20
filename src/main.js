@@ -18,6 +18,7 @@ import {faTwitter} from '@fortawesome/free-brands-svg-icons'
 import {faCloud} from '@fortawesome/free-solid-svg-icons'
 import {faCaretLeft} from '@fortawesome/free-solid-svg-icons'
 import {faCaretRight} from '@fortawesome/free-solid-svg-icons'
+import {faComment} from '@fortawesome/free-solid-svg-icons'
 import {faGaugeSimpleHigh} from '@fortawesome/free-solid-svg-icons'
 import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 import {faPhone} from '@fortawesome/free-solid-svg-icons'
@@ -30,6 +31,7 @@ library.add(
     faCloud,
     faCaretLeft,
     faCaretRight,
+    faComment,
     faFacebookF,
     faGaugeSimpleHigh,
     faMagnifyingGlass,
