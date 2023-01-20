@@ -143,6 +143,7 @@ export default {
             width: 100%;
             position: relative;
             padding: 200px 0;
+            min-width: 1240px;
 
             .img-wrapper{
                 position: relative;
@@ -210,7 +211,7 @@ export default {
                 width: 55%;
                 height: calc(100% - 400px);
                 z-index: 2;
-                padding: 150px 100px;
+                padding: 3% 100px;
                 background-color: $bg-lightest;
                 border-radius: 10px;
                 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;

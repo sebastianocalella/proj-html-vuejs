@@ -36,11 +36,17 @@ export default {
         overflow: hidden;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
+        &:nth-child(even) .upper-border,
+        &:nth-child(even) .colored-banner{
+                background: linear-gradient(to right, $bg-gradient-yellow, $bg-gradient-green);
+            }
+
         .upper-border{
             width: 100%;
             height: 12px;
-            background-color: black;
+            background: black;
             margin-bottom: 25px;
+
         }
         h3{
             text-transform: uppercase;
@@ -53,7 +59,7 @@ export default {
         }
         .colored-banner{
             color:$c-lightest;
-            background-color: black;
+            background: black;
             padding: 15px 0;
             margin-bottom: 50px;
             p{
