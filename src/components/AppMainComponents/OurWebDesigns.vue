@@ -11,8 +11,14 @@
 
         <div class="cards-container">
             <div  v-for="card in cards" class="image-wrapper">
+                <div class="blancket">
+                    <div class="categories">
+                        <span v-for="category in card.blancket.categories"> {{ category }} </span>
+                    </div>
+                    <h4>{{ card.blancket.hText }}</h4>
+                </div>
                 <ImageCard
-                :imgUri="card"/>
+                :imgUri="card.imgUri"/>
             </div>
         </div>
         <button>read more</button>
@@ -37,14 +43,82 @@ export default {
                 title:'Our recent <span class="text-content-component-span">web designs</span> &<br> some examples of<br> past <span class="text-content-component-span">projects</span>',
                 },
             cards:[
-                'ina-soulis-227104-unsplash-1024x1024.jpg',
-                'sunisa-misa-531163-unsplash-1024x1024.jpg',
-                '355H-1024x1024.jpg',
-                'photo-1448932252197-d19750584e56-1024x1024.jpg',
-                'business-competition-PB366D8-1024x1024.jpg',
-                'cozy-sofa-in-living-room-PQR5AB9-1024x1024.jpg',
-                'aa9a4539-PQGJ7HU-1024x1024.jpg',
-                'cody-davis-253928-unsplash-1024x1024.jpg'
+                {
+                    imgUri:'ina-soulis-227104-unsplash-1024x1024.jpg',
+                    blancket:{
+                        hText:'The Basket Of Flowers',
+                        categories:[
+                            'brandings',
+                            'marketing'
+                        ],
+                    }
+                },
+                {
+                    imgUri:'sunisa-misa-531163-unsplash-1024x1024.jpg',
+                    blancket:{
+                        hText:'A Famous Ferris Wheel',
+                        categories:[
+                            'marketing'
+                        ],
+                    }
+                },
+                {
+                    imgUri:'355H-1024x1024.jpg',
+                    blancket:{
+                        hText:'Complementary Colors',
+                        categories:[
+                            'brandings',
+                            'marketing'
+                        ],
+                    }
+                },
+                {
+                    imgUri:'photo-1448932252197-d19750584e56-1024x1024.jpg',
+                    blancket:{
+                        hText:'Business Prestige',
+                        categories:[
+                            'brandings',
+                        ],
+                    }
+                },
+                {
+                    imgUri:'business-competition-PB366D8-1024x1024.jpg',
+                    blancket:{
+                        hText:'Colorful Origami boats',
+                        categories:[
+                            'brandings',
+                            'marketing'
+                        ],
+                    }
+                },
+                {
+                    imgUri:'cozy-sofa-in-living-room-PQR5AB9-1024x1024.jpg',
+                    blancket:{
+                        hText:'Modern couch',
+                        categories:[
+                            'marketing'
+                        ],
+                    }
+                },
+                {
+                    imgUri:'aa9a4539-PQGJ7HU-1024x1024.jpg',
+                    blancket:{
+                        hText:'Hot Air Balloons',
+                        categories:[
+                            'brandings',
+                            'marketing'
+                        ],
+                    }
+                },
+                {
+                    imgUri:'cody-davis-253928-unsplash-1024x1024.jpg',
+                    blancket:{
+                        hText:'Make Difference',
+                        categories:[
+                            'brandings',
+                        ],
+                    }
+                },
             ]
         }
     },
@@ -58,6 +132,7 @@ export default {
 
 <style lang="scss">
 @use '../../styles/general.scss' as *;
+@use '../../styles/partials/colors' as *;
 
     #OurWebDesigns{
         padding: 220px 150px;
@@ -85,6 +160,45 @@ export default {
 
             .image-wrapper{
                 width: calc(25% - 4px);
+                position: relative;
+
+                .blancket{
+                    display: flex;
+                    flex-direction: column-reverse;
+                    align-items: center;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: calc(100% - 4px);
+                    background: linear-gradient(45deg, $bg-gradient-yellow, $bg-gradient-green);
+                    z-index: 1;
+                    opacity: 0;
+                    transition: opacity .72s;
+
+                    .categories{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-evenly;
+                    }
+
+                    h4{
+                        font-size: 1.4rem;
+                        padding-bottom: 1.2rem;
+                    }
+                    span{
+                        padding-bottom: 1rem;
+                        text-transform: uppercase;
+                    }
+
+                    color: $c-lightest;
+
+                    &:hover{
+                        opacity: .85;
+                    }
+                }
             }
         }
         button{

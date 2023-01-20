@@ -117,6 +117,8 @@ export default {
                         background-color:#00000000;
                         border: none;
                         padding-left: 25px;
+                        padding-right: 25px;
+                        border-radius: 40px;
                     }
                     button{
                         color: $bg-gray-2;
@@ -124,6 +126,9 @@ export default {
                         padding-left: 10px;
                         padding-right: 10px;
                         background-color: #00000000;
+                        &:hover{
+                            cursor: pointer;
+                        }
                     }
                 }
             }

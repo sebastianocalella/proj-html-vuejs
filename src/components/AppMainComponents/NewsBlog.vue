@@ -80,7 +80,7 @@ export default {
                 position: relative;
     
                 >.container{
-                    padding: 0 40px;
+                    padding: 0;
                     width: calc(100%/3 - 22px);
                     border-radius: 15px;
                     overflow: hidden;
@@ -107,6 +107,7 @@ export default {
     
             button{
                 @include brand-dark;
+                margin-top: 80px;
             }
         }
     }
