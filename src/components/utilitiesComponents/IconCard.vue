@@ -49,6 +49,7 @@ export default {
 
         &:hover{
             background-position: right;
+            cursor: pointer;
             h2,.icon,p{
                 color: $c-lightest;
                 transition: 300ms ease-in-out;

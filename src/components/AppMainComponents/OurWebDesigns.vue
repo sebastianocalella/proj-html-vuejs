@@ -197,6 +197,7 @@ export default {
 
                     &:hover{
                         opacity: .85;
+                        cursor: pointer;
                     }
                 }
             }

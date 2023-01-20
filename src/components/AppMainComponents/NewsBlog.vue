@@ -111,6 +111,7 @@ export default {
                     &:hover .absolute-content-container{
                         top: calc(100% - 10px);
                         background-position: right;
+                        cursor: pointer;
                         
                         p,h4,h4>span{
                             color: $c-lightest;
@@ -118,6 +119,7 @@ export default {
                     }
                     &:hover img{
                         transform: scale(1.1);
+                        cursor: pointer;
                     }
                 }
             }
