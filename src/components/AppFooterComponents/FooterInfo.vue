@@ -88,6 +88,10 @@ export default {
 
             .links li{
                 text-align: center;
+                &:hover{
+                    cursor: pointer;
+                    color:$c-brand-green;
+                }
             }
 
             .contact li{
