@@ -19,21 +19,27 @@
 }
 
 @mixin brand-color{
-    background: linear-gradient(to right, $bg-gradient-yellow, $bg-gradient-green);
+    background: linear-gradient(to right, $bg-gradient-yellow, $bg-gradient-green, $bg-dark-1, black);
+    background-size: 300%;
+    background-position:left ;
     box-shadow: #e0a45f 0px 7px 29px 0px;
+    transition: background-position .55s;
     &:hover{
         cursor: pointer;
-        background:linear-gradient(to right, $bg-dark-1, black);
+        background-position: right;
         box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
     }
 }
 
 @mixin brand-dark {
-    background:linear-gradient(to right, $bg-dark-1, black);
+    background:linear-gradient(to right, black, $bg-dark-1,$bg-gradient-yellow, $bg-gradient-green);
+    background-size: 300%;
+    background-position: left;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+    transition: background-position .55s;
     &:hover{
         cursor: pointer;
-        background: linear-gradient(to right, $bg-gradient-yellow, $bg-gradient-green);
+        background-position: right;
         box-shadow: #e0a45f 0px 7px 29px 0px;
     }
 }
