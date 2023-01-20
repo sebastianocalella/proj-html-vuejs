@@ -33,7 +33,6 @@ export default {
         img{
             width: 100%;
         }
-
         .absolute-content-container{
             position: absolute;
             background-color: $bg-lightest;
@@ -48,10 +47,12 @@ export default {
             h4{
                 font-size: 1.2rem;
                 line-height: 40px;
+                margin-bottom: 15px;
 
                 span{
                     font-size: .6rem;
                     vertical-align: top;
+                    color: $c-brand-green;
                 }
             }
         }

@@ -3,7 +3,7 @@
         <div class="container">
             <TextContent
             :title="textContent.title"/>
-            <div class="card-container">
+            <div class="cards-container">
                 <ImageCard v-for="(card,index) in cards"
                 :index="index"
                 :imgUri="card.imageUri"
@@ -60,6 +60,7 @@ export default {
 
 <style lang="scss">
 @use '../../styles/general.scss' as *;
+@use '../../styles/partials/colors' as *;
 
     #news-blog{
         .container{
@@ -73,7 +74,7 @@ export default {
                 margin-left: calc(50% - 32px);
             }
     
-            .card-container{
+            .cards-container{
                 display: flex;
                 justify-content: space-between;
                 margin-bottom: 75px;
@@ -92,6 +93,10 @@ export default {
                         padding: 25px 25px 0;
                         top: calc(100% - 40px);
                         width: calc(70%/3);
+                        transition: all .4s;
+                        background: linear-gradient(45deg,$bg-lightest 0 50%, $bg-gradient-yellow, $bg-gradient-green);
+                        background-size: 300%;
+                        background-position: left;
                         &.card-1{
                             left: calc(100%/6);
                         }
@@ -100,6 +105,15 @@ export default {
                         }
                         &.card-3{
                             left: calc(50% + (100%/3));
+                        }
+                    }
+
+                    &:hover .absolute-content-container{
+                        top: calc(100% - 10px);
+                        background-position: right;
+                        
+                        p,h4,h4>span{
+                            color: $c-lightest;
                         }
                     }
                 }
