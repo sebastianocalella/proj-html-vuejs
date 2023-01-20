@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <footer>
         <FooterInfo/>
         <CopyRightBanner/>
-    </div>
+    </footer>
 </template>
 
 <script>
