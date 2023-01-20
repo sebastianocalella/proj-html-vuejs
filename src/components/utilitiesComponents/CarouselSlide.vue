@@ -12,7 +12,7 @@
                 </li>
             </ul>
         </div>
-        <div class="img-wrapper">
+        <div class="img-wrapper" :class="direction">
             <img :src="getCarouselImage(imgUri)" alt="">
         </div>
     </div>
@@ -30,7 +30,8 @@ export default {
         socials: Array,
         imgUri: String,
         visibleSlide: Number,
-        index: Number
+        index: Number,
+        direction: String
     },
     methods:{
         getCarouselImage: function(imagePath){
@@ -45,11 +46,13 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0 90px;
+        margin-top: 90px;
 
         .text-content-container{
-            width: 35%;
+            width: 30%;
             margin-left: 150px;
+            min-width: 530px;
+            margin-top: 135px;
 
             ul{
                 display: flex;
@@ -63,12 +66,12 @@ export default {
         }
 
         .img-wrapper{
-            width: 60%;
+            width: 65%;
             overflow: hidden;
 
             img{
                 width: 100%;
-                transform: translateY(5%);
+                height: 100%;
             }
         }
     }

@@ -1,40 +1,26 @@
 <template>
-    <div class="container">
-        <CarouselSlide v-for="(slide,index) in carouselSlides" :key="slide" :index="index"
-        :textContent="slide.textContent"
-        :socials="slide.socials"
-        :imgUri="slide.imageUri"
-        :visibleSlide="visibleSlide"/>
-    </div> 
-    <!--         <div class="text-content">
-                <span>17 years of experience</span>
-                <h1>Focus on Your <span>Business</span></h1>
-                <ComponentDivider/>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. Separated they live in Bookmarksgrove.</p>
-                <button>read more</button>
-                <span>
-                    <a href="">facebook </a>
-                    - 
-                    <a href="">instagram </a>
-                    - 
-                    <a href="">youtube </a>
-                    - 
-                    <a href="">twitter</a>
-                </span>
-            </div>
-            <div class="carousel-container">
-                <div>
-                    <img src="../../assets/images/Group-35-2x.png" alt="">
-                </div>
-            </div>
-            <div class="slider">
-                <ul>
-                    <li v-for="(image,index) in carouselImages">
-                        0{{ index + 1}}
-                    </li>
-                </ul>
-            </div>
-        -->
+    <section id="main-carousel">
+        <div class="container">
+            <CarouselSlide v-for="(slide,index) in carouselSlides" :key="slide" :index="index"
+            :textContent="slide.textContent"
+            :socials="slide.socials"
+            :imgUri="slide.imageUri"
+            :visibleSlide="visibleSlide"
+            :direction="carouselDirection"/>
+        </div> 
+        <div class="slider">
+            <ul>
+                <li><font-awesome-icon @click="prevSlide" icon="fa-solid fa-caret-left" 
+                    :direction="carouselDirection"/></li>
+                <li v-for="(element,index) in carouselSlides"
+                :class="(visibleSlide == index) ? 'current-slide' : ''">
+                    0{{ index + 1}}
+                </li>
+                <li><font-awesome-icon @click="nextSlide" icon="fa-solid fa-caret-right" 
+                    :direction="carouselDirection"/></li>
+            </ul>
+        </div>
+    </section>
 </template>
 
 <script>
@@ -103,13 +89,31 @@ export default {
                     imageUri:'Group-40-2x.png'
                 }
             ],
-            visibleSlide: 2,
+            visibleSlide: 0,
+            carouselDirection: ''
         }
     },
     methods:{
-        getCarouselImage: function(imagePath){
-            return new URL('../../assets/images/'+imagePath, import.meta.url).href
+        nextSlide(){
+            if(this.visibleSlide >= this.carouselSlides.length - 1){
+                this.carouselDirection = 'right'
+                this.visibleSlide = 0;
+            } else {
+                this.carouselDirection = 'right'
+                this.visibleSlide++;
+            }
         },
+        prevSlide(){
+            if(this.visibleSlide <= 0){
+                this.visibleSlide = this.carouselSlides.length - 1;
+                this.carouselDirection = 'left'
+
+            } else {
+                this.visibleSlide--;
+                this.carouselDirection = 'left'
+
+            }
+        }
     }
 }
 </script>
@@ -117,95 +121,27 @@ export default {
 <style lang="scss" scoped>
 @use '../../styles/partials/colors' as *;
 
-    .text-content{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 635px;
-        padding: 175px 0 80px;
-
-        >span{
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            font-weight: bold;
-            color: $c-dark-3;
-
-            &:first-child{
-                background: -webkit-linear-gradient($bg-gradient-green, $bg-gradient-yellow);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                margin-bottom: 20px;
-            }
-        }
-
-        h1{
-            font-size: 6rem;
-            span{
-                font-size: 6rem;
-                color: $c-brand-green;
-            }
-        }
-
-        p{
-            margin-bottom: 90px;
-            font-size: 1.1rem;
-            line-height: 1.9rem;
-        }
-
-        button{
-            margin-bottom: 120px;
-            height: 52px;
-            width: 160px;
-            border-radius: 80px;
-            color: $c-lightest;
-            text-transform: uppercase;
-            border: none;
-            background: linear-gradient(to right, $bg-dark-1, $bg-darkest-t3);
-            box-shadow: #605d6e77 0px 7px 29px 0px;
-            &:hover{
-                cursor: pointer;
-            }
-        }
-
-        a{
-            text-decoration: none;
-            &:visited{
-                color: $c-dark-3;
-            }
-        }
-    }
-
-    .carousel-container{
-        display: flex;
-        position: absolute;
-        top: 0;
-        left: calc(100% - 1150px);
-        height: 100%;
-        .img-wrapper{
-            position: relative;
-            height: 100%;
-            top: 0;
-            right: 0px;
-            width: 1150px;
-            overflow: hidden;
-            img{
-                transform: translate(0, -10%);
-            }
-        }
-    }
-
+#main-carousel{
+    position: relative;
     .slider ul{
         display: flex;
         padding: 15px 10px;
         position: absolute;
         left: 50%;
-        bottom: 35px;
+        bottom: 15px;
         transform: translate(-50%,-50%);
         background: linear-gradient(to right, $bg-dark-1, $bg-darkest-t3);
         border-radius: 30px;
+
         li{
             padding: 0 10px;
             color: $c-lightest-t-6;
+            transition: all .35s ease-in-out;
+        }
+
+        .current-slide{
+            color: $c-brand-green;
         }
     }
+}
 </style>

@@ -33,16 +33,20 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @use '../styles/partials/colors' as *;
 @use '../styles/partials/alignment' as *;
 
-    section{
-        padding: $h-p-standard;
-        position: relative;
+    main{
+        min-width: 1480px;
 
-        &:nth-child(odd){
-            background-color: $bg-light-2;
+        section{
+            padding: $h-p-standard;
+            position: relative;
+    
+            &:nth-child(odd){
+                background-color: $bg-light-2;
+            }
         }
     }
 </style>
